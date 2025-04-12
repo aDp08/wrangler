@@ -140,7 +140,7 @@ numberRange
  ;
 
 value
- : String | Number | Column | Bool
+ : String | Number | Column | Bool | ByteUnit | TimeUnit
  ;
 
 ecommand
@@ -311,3 +311,10 @@ fragment Int
 fragment Digit
  : [0-9]
  ;
+ByteUnit   // Bytes Units addition
+  : [0-9]+ ( 'KB' | 'MB' | 'GB' | 'TB' )
+  ;
+TimeUnit  //Time Units addition
+  : [0-9]+ ( 'ms' | 's' | 'm' | 'h' | 'd' )
+  ;
+
